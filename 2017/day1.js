@@ -3,12 +3,13 @@ const input =
 const inputSplit = input.split('');
 let sumValue = 0;
 
-for (let i = 0; i < input.length; i++) {
-  let previousValue = parseInt(inputSplit.slice(i - 1));
+for (let i = 0; i < input.length / 2; i++) {
+  let previousValue = parseInt(inputSplit.slice(i - input.length / 2));
   let currentValue = parseInt(inputSplit.slice(i));
   if (previousValue == currentValue) {
     sumValue += currentValue;
   }
 }
 
+sumValue = sumValue * 2;
 console.log(sumValue);
